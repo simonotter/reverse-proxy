@@ -1,6 +1,6 @@
-language: node_js
-node_js:
-  - 12
+# language: node_js
+# node_js:
+#   - 12
 
 services:
   - docker
@@ -15,8 +15,8 @@ before_scripts:
 
 script:
   - docker --version # print the version of docker for logging
-  - docker build -t udagram-microservice-users .
-  - docker tag udagram-microservice-users simonotter/udagram-microservice-users:latest
+  - docker build -t udagram-reverse-proxy .
+  - docker tag reverse-proxy simonotter/udagram-reverse-proxy:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD"  | docker login -u "$DOCKER_USERNAME" --password-stdin
