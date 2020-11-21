@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - image: simonotter/udagram-reverse-proxy:latest
-        name: reverse-proxy
+        name: udagram-reverse-proxy
         imagePullPolicy: Always          
         resources:
           requests:
